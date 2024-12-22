@@ -1,3 +1,5 @@
+import generateMarkdown from './utils/generateMarkdown.js'
+
 // TODO: Include packages needed for this application
 import { writeFile} from 'fs/promises';
 import inquirer from "inquirer";
@@ -41,7 +43,7 @@ const questions = [
         message: 'Choose your license:',
         choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License',
             'Boost Software License 1.0', 'Mozilla Public License 2.0', 'The Unlicense'],
-    }
+    },
     {
         type: 'input',
         name: 'gitusername',
@@ -56,13 +58,13 @@ const questions = [
 
 const userInput = () => {
     prompt(questions).then((answers) => {
-        console.log(answers);
+        // console.log(answers);
+        const readmeText = generateMarkdown(answers);
+        writeFile('./Output/README.md', readmeText);
     });
 };
 
 userInput();
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
