@@ -19,14 +19,16 @@ const generateMarkdown = ({title, description, installinstructions, usageinfo,
 
 ${description}
 
-## Table of Contents (Optional)
+## Table of Contents
 
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [License](#license)
+- [How To Contribute](#how)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
@@ -53,10 +55,10 @@ ${testinfo}
 ## Questions
 
 Here is my contact info if you have any questions on this file.
-${gitusername}
-${email}
 
-Thanks for reading and using this file.`
+Link to my Github: [https://github.com/${gitusername}](https://github.com/${gitusername})
+
+Email me here: ${email}`;
 };
 
 export default generateMarkdown;
