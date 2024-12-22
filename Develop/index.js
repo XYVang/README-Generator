@@ -60,7 +60,7 @@ const userInput = () => {
     prompt(questions).then((answers) => {
         // console.log(answers);
         const readmeText = generateMarkdown(answers);
-        writeFile('./Output/README.md', readmeText);
+        writeFile('README.md', readmeText);
     });
 };
 
