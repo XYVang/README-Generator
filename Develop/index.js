@@ -19,7 +19,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'installintructions',
+        name: 'installinstructions',
         message: 'Enter your installation instructions:',
     },
     {
@@ -58,7 +58,7 @@ const questions = [
 
 const userInput = () => {
     prompt(questions).then((answers) => {
-        // console.log(answers);
+        console.log(answers);
         const readmeText = generateMarkdown(answers);
         writeFile('README.md', readmeText);
     });
